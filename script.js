@@ -13,6 +13,8 @@ const collectEmployees = function() {
     lastName:lastName,
     salary:salary,
   }
+  employeeList.push(employee);
+  return employeeList
 }
 
 // Display the average salary
