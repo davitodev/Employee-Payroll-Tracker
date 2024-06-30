@@ -4,17 +4,19 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
-  alert("test");
   var employeeList = [];
-  var firstName = prompt("What is your first name?");
-  var lastName = prompt("What is your last name?");
-  var salary = prompt("What is your salary?");
-  var employee = {
-    firstName:firstName,
-    lastName:lastName,
-    salary:salary,
+  while(confirm("Do you want to add another employee?")){
+    var firstName = prompt("What is your first name?");
+    var lastName = prompt("What is your last name?");
+    var salary = prompt("What is your salary?");
+    var employee = {
+      firstName:firstName,
+      lastName:lastName,
+      salary:salary,
+    }
+    employeeList.push(employee);
   }
-  employeeList.push(employee);
+  confirm("Do you want to add another employee?")
   return employeeList
 }
 
